@@ -86,7 +86,7 @@
     padding-right: 15px;
     border-radius:var(--radius-card);
     background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.4);
     backdrop-filter:blur(12px);
     box-shadow:var(--shadow-panel);
     transition: var(--transition);
@@ -114,7 +114,7 @@
     align-items:center;
     border-radius:20px;
     background: rgba(255,255,255,.09);
-    border: 1px solid rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.4);
     backdrop-filter:blur(12px);
     box-shadow:var(--shadow-panel);
 }
