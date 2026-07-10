@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#101214">
+
+    <title>HitBit Dashboard</title>
+
+    <!-- =====================================================
+         ESTILOS
+    ====================================================== -->
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+</head>
+<body>
+
+<div id="app">
+
+    <!-- =====================================================
+         CABECERA
+    ====================================================== -->
+
+    <header id="header">
+
+        <!-- ==============================
+             RELOJ
+        =============================== -->
+        <section id="clock-panel" class="panel">
+            <h1 id="clock-time">--:--</h1>
+            <p id="clock-weekday">------</p>
+            <p id="clock-date">-- ------- ----</p>
+        </section>
+
+        <!-- ==============================
+             TIEMPO ACTUAL
+        =============================== -->
+        <section id="weather-panel" class="panel">
+            <div id="city-name">Jimena, Jaén</div>
+            <div class="weather-now">
+                <div class="weather-icon-now">
+                    <img id="weather-icon" src="assets/icons/weather/unknown.svg" alt="Tiempo">
+                </div>
+                <div class="weather-details-now">
+                    <div id="weather-temperature">--°</div>
+                    <div id="weather-description">Cargando...</div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!-- =====================================================
+         DATOS ACTUALES
+    ====================================================== -->
+    <section id="metrics">
+        <!-- JavaScript genera las tarjetas -->
+    </section>
+
+    <!-- =====================================================
+         PREVISIÓN SEMANAL
+    ====================================================== -->
+    <section id="forecast">
+        <!-- JavaScript genera los 7 días -->
+    </section>
+
+    <!-- =====================================================
+         PIE
+    ====================================================== -->
+    <footer id="footer">
+        <div id="dashboard-status">Inicializando...</div>
+    </footer>
+</div>
+
+<!-- ==========================================================
+     PANTALLA DE CARGA
+=========================================================== -->
+<div id="loading-screen">
+    <div class="loader"></div>
+    <p>
+        Cargando datos...
+    </p>
+</div>
+
+<!-- ==========================================================
+     JAVASCRIPT
+=========================================================== -->
+<script src="assets/js/config.js"></script>
+<script src="assets/js/weatherCodes.js"></script>
+<script src="assets/js/utils.js"></script>
+<script src="assets/js/clock.js"></script>
+<script src="assets/js/weather.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+
+</html>
