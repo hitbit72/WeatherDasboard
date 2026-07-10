@@ -36,7 +36,7 @@ const UI = {
         */
         this.elements.temperature.textContent =  Utils.formatTemperature(current.temperature);
         this.elements.description.textContent =  current.weather.text;
-        this.elements.icon.src = "assets/icons/weather/" + CONFIG.iconos + "/" + current.weather.icon;
+        this.elements.icon.src = CONFIG.icon_path + CONFIG.icon_type + "/" + current.weather.icon;
     },
 
     updateMetrics(current){
@@ -128,7 +128,7 @@ const UI = {
             </div>
             <img
                 class="forecast-icon"
-                src="assets/icons/weather/${CONFIG.iconos}/${day.weather.icon}"
+                src="${CONFIG.icon_path}${CONFIG.icon_type}/${day.weather.icon}"
                 alt="">
             <div class="forecast-max">
                 ${Utils.formatTemperature(day.max)}
