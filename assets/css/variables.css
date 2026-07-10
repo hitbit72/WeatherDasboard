@@ -59,8 +59,10 @@
     --temperature-size: clamp(72px,8vw,112px);
     --metric-size: 40px;
     --forecast-size: 32px;
-    --status-size: 12px;
+    --status-size: 14px;
     --city-size: 22px;
+    --metric-label: 22px;
+    --forecast-name: 22px;
 
     /* ======================================================
        ANIMACIONES

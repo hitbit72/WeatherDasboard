@@ -93,9 +93,9 @@
 }
 
 .metric-label{
-    font-size:18px;
-    color:var(--color-blue);
-    margin-bottom:12px;
+    font-size: var(--metric-label);
+    color: var(--color-blue);
+    margin-bottom: 12px;
 }
 
 .metric-value{
@@ -120,9 +120,9 @@
 }
 
 .forecast-name{
-    font-size:20px;
-    font-weight:600;
-    color:var(--color-text-soft);
+    font-size: var(--forecast-name);
+    font-weight: 600;
+    color: var(--color-text-soft);
 }
 
 .forecast-icon{
