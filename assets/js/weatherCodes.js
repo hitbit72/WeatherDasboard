@@ -24,7 +24,7 @@ const WEATHER_CODES = {
         3: {
             text: "Cubierto",
             icon: "cloudy.svg",
-            nicon: "cloudy.svg"
+            nicon: "cloudy_night.svg"
         },
         45: {
             text: "Niebla",
