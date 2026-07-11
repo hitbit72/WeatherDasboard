@@ -34,10 +34,7 @@ const UI = {
         console.log("Updating current...");
         console.log("Current:", current);
         */
-        // Determinar si es de día (antes de las 22h) o de noche (22h o más)
-        const horaActual = new Date().getHours();
-        const esNoche = horaActual >= 22;
-        const iconoWeather = esNoche ? current.weather.nicon : current.weather.icon;
+        const iconoWeather = Utils.esDeNoche() ? current.weather.nicon : current.weather.icon;
 
         this.elements.temperature.textContent =  Utils.formatTemperature(current.temperature);
         this.elements.description.textContent =  current.weather.text;
