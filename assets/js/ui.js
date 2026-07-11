@@ -34,6 +34,7 @@ const UI = {
         console.log("Updating current...");
         console.log("Current:", current);
         */
+       
         this.elements.temperature.textContent =  Utils.formatTemperature(current.temperature);
         this.elements.description.textContent =  current.weather.text;
         this.elements.icon.src = CONFIG.icon_path + CONFIG.icon_type + "/" + current.weather.icon;
