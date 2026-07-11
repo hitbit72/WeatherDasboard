@@ -91,17 +91,10 @@ const UI = {
         card.className="metric";
         card.innerHTML=`
             <!-- 
-            <img
-                class="metric-icon"
-                src="assets/icons/ui/${metric.icon}"
-                alt="">
+            <img class="metric-icon" src="assets/icons/ui/${metric.icon}" alt="">
             -->
-            <div class="metric-label">
-                ${metric.label}
-            </div>
-            <div class="metric-value">
-                ${metric.value}
-            </div>
+            <div class="metric-label">${metric.label}</div>
+            <div class="metric-value">${metric.value}</div>
         </div>`;
         return card;
     },
@@ -123,19 +116,10 @@ const UI = {
         const card=document.createElement("article");
         card.className="forecast-day";
         card.innerHTML=`
-            <div class="forecast-name">
-                ${day.weekday}
-            </div>
-            <img
-                class="forecast-icon"
-                src="${CONFIG.icon_path}${CONFIG.icon_type}/${day.weather.icon}"
-                alt="">
-            <div class="forecast-max">
-                ${Utils.formatTemperature(day.max)}
-            </div>
-            <div class="forecast-min">
-                ${Utils.formatTemperature(day.min)}
-            </div>`;
+            <div class="forecast-name">${day.weekday}</div>
+            <img class="forecast-icon" src="${CONFIG.icon_path}${CONFIG.icon_type}/${day.weather.icon}" alt="">
+            <div class="forecast-max">${Utils.formatTemperature(day.max)}</div>
+            <div class="forecast-min">${Utils.formatTemperature(day.min)}</div>`;
         return card;
     },
 
