@@ -150,7 +150,8 @@ const WEATHER_CODES = {
     get(code) {
         return this.codes[code] || {
             text: "Desconocido",
-            icon: "unknown.svg"
+            icon: "unknown.svg",
+            nicon: "unknown.svg"
         };
     }
 };

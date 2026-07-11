@@ -94,8 +94,7 @@ const UI = {
         card.innerHTML=`
             <!-- <img class="metric-icon" src="assets/icons/ui/${metric.icon}" alt=""> -->
             <div class="metric-label">${metric.label}</div>
-            <div class="metric-value">${metric.value}</div>
-        </div>`;
+            <div class="metric-value">${metric.value}</div>`;
         return card;
     },
 

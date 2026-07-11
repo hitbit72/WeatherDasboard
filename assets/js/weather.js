@@ -111,6 +111,7 @@ const weather = {
                 this.data = cache;
                 return cache;
             }
+            UI.hideLoading();
             throw error;
         }
     },
