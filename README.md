@@ -1,4 +1,4 @@
-# HitBit Dashboard
+# Clock Dashboard
 
 Dashboard meteorológico minimalista diseñado para reutilizar una antigua tablet Android como reloj y estación meteorológica permanente.
 
