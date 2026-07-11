@@ -1,4 +1,5 @@
 /* ==========================================================
+   HitBit Dashboard 2026
    Reloj
    ========================================================== */
 
@@ -10,29 +11,9 @@ const clock = {
 
     update() {
         const now = new Date();
-        this.time.textContent = now.toLocaleTimeString(
-            CONFIG.locale,
-            {
-                hour: "2-digit",
-                minute: "2-digit"
-            }
-        );
-
-        this.weekday.textContent = now.toLocaleDateString(
-            CONFIG.locale,
-            {
-                weekday: "long"
-            }
-        );
-        
-        this.date.textContent = now.toLocaleDateString(
-            CONFIG.locale,
-            {
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-            }
-        );
+        this.time.textContent = Utils.now();
+        this.weekday.textContent = Utils.weekday(now, "long");
+        this.date.textContent = Utils.longDate(now);
     },
     start() {
         this.update();

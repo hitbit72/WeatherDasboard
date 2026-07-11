@@ -1,5 +1,5 @@
 /* ==========================================================
-   HitBit Dashboard
+   HitBit Dashboard 2026
    Utilidades
    ========================================================== */
 
@@ -34,14 +34,14 @@ const Utils = {
     },
 
     /* ======================================================
-       DÍA DE LA SEMANA
+       DÍA DE LA SEMANA - CORTO, LARGO
        ====================================================== */
-    weekday(date) {
+    weekday(date, t="short") {
         return new Date(date)
             .toLocaleDateString(
                 CONFIG.locale,
                 {
-                    weekday: "short"
+                    weekday: t
                 }
             )
             .replace(".", "")
@@ -60,6 +60,20 @@ const Utils = {
                     minute: "2-digit"
                 }
             );
+    },
+
+    /* ======================================================
+       FECHA LARGA
+       ====================================================== */
+    longDate(date){
+        return new Date(date).toLocaleDateString(
+            CONFIG.locale,
+            {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            }
+        );    
     },
 
     esDeNoche(){
