@@ -12,7 +12,7 @@ const clock = {
     update() {
         const now = new Date();
         this.time.textContent = Utils.now();
-        this.weekday.textContent = Utils.weekday(now, "long");
+        this.weekday.textContent = Utils.weekday(now, "long", false);
         this.date.textContent = Utils.longDate(now);
     },
     start() {

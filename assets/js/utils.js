@@ -36,16 +36,16 @@ const Utils = {
     /* ======================================================
        DÍA DE LA SEMANA - CORTO, LARGO
        ====================================================== */
-    weekday(date, t="short") {
-        return new Date(date)
+    weekday(date, t="short", uppercase=true) {
+        const day = new Date(date)
             .toLocaleDateString(
                 CONFIG.locale,
                 {
                     weekday: t
                 }
             )
-            .replace(".", "")
-            .toUpperCase();
+            .replace(".", "");
+            return uppercase ? day.toUpperCase() : day;
     },
 
     /* ======================================================
