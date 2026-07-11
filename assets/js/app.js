@@ -21,6 +21,7 @@ document.addEventListener(
         }
         catch (error) {
             console.error(error);
+            UI.hideLoading();
             UI.updateStatus("Sin conexión");
         }
     }
