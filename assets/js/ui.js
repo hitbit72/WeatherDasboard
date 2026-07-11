@@ -90,9 +90,7 @@ const UI = {
         const card = document.createElement("article");
         card.className="metric";
         card.innerHTML=`
-            <!-- 
-            <img class="metric-icon" src="assets/icons/ui/${metric.icon}" alt="">
-            -->
+            <!-- <img class="metric-icon" src="assets/icons/ui/${metric.icon}" alt=""> -->
             <div class="metric-label">${metric.label}</div>
             <div class="metric-value">${metric.value}</div>
         </div>`;
