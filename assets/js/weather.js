@@ -46,7 +46,7 @@ const weather = {
             timezone: "auto",
             forecast_days: 8
         });
-        console.log("URL: " + CONFIG.apiURL + "?" + params);
+        /* console.log("URL: " + CONFIG.apiURL + "?" + params); */
         return CONFIG.apiURL + "?" + params;
     },
 
@@ -111,7 +111,6 @@ const weather = {
                 this.data = cache;
                 return cache;
             }
-            UI.hideLoading();
             throw error;
         }
     },
@@ -122,7 +121,6 @@ const weather = {
     transformData(api) {
         console.log("transformData...");
         console.log("API:", api);
-        
         return {
             updated: new Date(),
             current: {
