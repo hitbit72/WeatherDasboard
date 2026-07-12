@@ -10,13 +10,23 @@ const UI = {
     },
     cacheElements() {
         this.elements = {
+            cityName : document.getElementById("city-name"),
             temperature : document.getElementById("weather-temperature"),
             description : document.getElementById("weather-description"),
             icon : document.getElementById("weather-icon"),
             metrics : document.getElementById("metrics"),
             forecast : document.getElementById("forecast"),
             status : document.getElementById("dashboard-status"),
-            loading : document.getElementById("loading-screen")
+            loading : document.getElementById("loading-screen"),
+            locationScreen : document.getElementById("location-screen"),
+            locationForm : document.getElementById("location-form"),
+            locationError : document.getElementById("location-error"),
+            locationCancel : document.getElementById("location-cancel"),
+            locationCity : document.getElementById("location-city"),
+            locationLatitude : document.getElementById("location-latitude"),
+            locationLongitude : document.getElementById("location-longitude"),
+            settingsBtn : document.getElementById("settings-btn"),
+            geolocateBtn : document.getElementById("geolocate-btn")
         };
     },
 
@@ -129,6 +139,45 @@ const UI = {
     hideLoading(){
         this.elements.loading.style.opacity=0;
         setTimeout(()=>{this.elements.loading.remove();},500);
+    },
+
+    updateCityName(city){
+        this.elements.cityName.textContent = city;
+    },
+
+    showLocationForm(data){
+        if (this.elements.loading) {
+            this.elements.loading.remove();
+        }
+
+        this.elements.locationError.classList.add("hidden");
+
+        if (data) {
+            this.elements.locationCity.value = data.city;
+            this.elements.locationLatitude.value = data.latitude;
+            this.elements.locationLongitude.value = data.longitude;
+            this.elements.locationCancel.classList.remove("hidden");
+        }
+        else {
+            this.elements.locationForm.reset();
+            this.elements.locationCancel.classList.add("hidden");
+        }
+
+        this.elements.locationScreen.classList.remove("hidden");
+    },
+
+    hideLocationForm(){
+        this.elements.locationScreen.classList.add("hidden");
+    },
+
+    showLocationError(text){
+        this.elements.locationError.textContent = text;
+        this.elements.locationError.classList.remove("hidden");
+    },
+
+    setGeolocateLoading(isLoading){
+        this.elements.geolocateBtn.disabled = isLoading;
+        this.elements.geolocateBtn.classList.toggle("loading", isLoading);
     }
 
 };

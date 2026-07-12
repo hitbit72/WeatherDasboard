@@ -22,9 +22,11 @@ const weather = {
     // Devuelve la URL completa de Open-Meteo
     // ======================================================
     buildURL() {
+        const location = Location.get();
+
         const params = new URLSearchParams({
-            latitude: CONFIG.latitude,
-            longitude: CONFIG.longitude,
+            latitude: location.latitude,
+            longitude: location.longitude,
             current: [
                 "temperature_2m",
                 "relative_humidity_2m",
@@ -46,7 +48,7 @@ const weather = {
             timezone: "auto",
             forecast_days: 8
         });
-        /* console.log("URL: " + CONFIG.apiURL + "?" + params); */
+        console.log("URL: " + CONFIG.apiURL + "?" + params);
         return CONFIG.apiURL + "?" + params;
     },
 
@@ -121,6 +123,7 @@ const weather = {
     transformData(api) {
         console.log("transformData...");
         console.log("API:", api);
+        
         return {
             updated: new Date(),
             current: {

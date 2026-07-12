@@ -79,7 +79,7 @@ const Utils = {
     esDeNoche(){
     /* ======================================================
        COMPRUEBA SI ES DE NOCHE
-       Determinar si es de día (antes de las 22h) o de noche (22h o más) hasta la 6h
+       Determinar si es de día (antes de las 22h) o de noche (22h o más)
        ====================================================== */
        const horaActual = new Date().getHours();
        return horaActual >= 22 || horaActual < 6;

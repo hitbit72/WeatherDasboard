@@ -151,7 +151,29 @@
 
 #dashboard-status{
     font-size:var(--status-size);
+}
+
+.footer-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
     margin-left:auto;
+}
+
+#settings-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:none;
+    border:none;
+    padding:4px;
+    color:var(--color-text-muted);
+    cursor:pointer;
+    transition:var(--transition-fast);
+}
+
+#settings-btn:hover{
+    color:var(--color-text);
 }
 
 /* ==========================================================

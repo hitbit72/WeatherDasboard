@@ -8,6 +8,7 @@ const clock = {
     time: document.getElementById("clock-time"),
     weekday: document.getElementById("clock-weekday"),
     date: document.getElementById("clock-date"),
+    timer: null,
 
     update() {
         const now = new Date();
@@ -17,6 +18,9 @@ const clock = {
     },
     start() {
         this.update();
-        setInterval(() => this.update(), CONFIG.clockRefresh);
+        if (this.timer) {
+            clearInterval(this.timer);
+        }
+        this.timer = setInterval(() => this.update(), CONFIG.clockRefresh);
     }
 };
