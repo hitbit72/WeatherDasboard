@@ -19,4 +19,6 @@ El proyecto está desarrollado únicamente con **HTML5, CSS3 y JavaScript**, sin
 
 El objetivo del proyecto es ofrecer una interfaz limpia, elegante y fácil de leer desde varios metros de distancia, con un consumo mínimo de CPU y memoria para funcionar de forma continua las 24 horas del día.
 
-![](./clock.png)
+![](./assets/img/clock.png)
+
+![](./assets/img/location.png)
