@@ -13,6 +13,7 @@ El proyecto está desarrollado únicamente con **HTML5, CSS3 y JavaScript**, sin
 - Temperatura máxima y mínima del día.
 - Humedad, lluvia y velocidad del viento.
 - Pronóstico para los próximos 7 días.
+- Detección de ubicación con la API de openstreetmap.
 - Actualización automática mediante la API de Open-Meteo.
 - Diseño minimalista optimizado para pantalla horizontal.
 
